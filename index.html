@@ -49,6 +49,12 @@
             <path d="m4.5 17 4.8-4.6a2 2 0 0 1 2.7 0l3.2 3.1a2 2 0 0 0 2.7 0l1.6-1.5"></path>
           </svg>
         </button>
+        <button class="rail-btn" type="button" data-filter="tutorial" title="教程" aria-label="教程" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3.5" y="4.5" width="17" height="15" rx="4"></rect>
+            <path d="m10 9 5.5 3L10 15z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </button>
       </nav>
       <button class="rail-top" type="button" id="toTop" title="回到顶部" aria-label="回到顶部">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -73,6 +79,7 @@
           <button class="nav-link" type="button" data-filter="software" aria-pressed="false">软件包</button>
           <button class="nav-link" type="button" data-filter="doc" aria-pressed="false">文档</button>
           <button class="nav-link" type="button" data-filter="asset" aria-pressed="false">素材</button>
+          <button class="nav-link" type="button" data-filter="tutorial" aria-pressed="false">教程</button>
         </nav>
 
         <label class="search">
@@ -120,6 +127,9 @@
             </div>
           </section>
 
+          <div class="cards" id="grid"></div>
+          <p class="empty" id="empty" hidden></p>
+
           <section class="showcase tutorial" aria-labelledby="tutorialTitle">
             <div class="showcase-head">
               <div class="showcase-text">
@@ -132,9 +142,6 @@
               你的浏览器不支持视频播放，<a href="assets/videos/tutorial.mp4">点此下载视频</a>。
             </video>
           </section>
-
-          <div class="cards" id="grid"></div>
-          <p class="empty" id="empty" hidden></p>
         </div>
 
         <aside class="aside">
