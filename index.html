@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>下载中心</title>
+  <meta name="description" content="软件包、文档与素材的统一下载中心，支持 Windows、macOS 与 Linux。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='7' fill='%230d1220'/%3E%3Cpath d='M12 6v9m-4-4 4 4 4-4M7 19h10' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail" aria-label="分类导航">
+      <a class="rail-logo" href="./" aria-label="下载中心首页">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3.5v11"></path>
+          <path d="m7.5 10.5 4.5 4.5 4.5-4.5"></path>
+          <path d="M4.5 20h15"></path>
+        </svg>
+      </a>
+      <nav class="rail-nav" aria-label="资源分类">
+        <button class="rail-btn is-active" type="button" data-filter="all" title="全部资源" aria-label="全部资源" aria-pressed="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="7" height="7" rx="2"></rect>
+            <rect x="13.5" y="3.5" width="7" height="7" rx="2"></rect>
+            <rect x="3.5" y="13.5" width="7" height="7" rx="2"></rect>
+            <rect x="13.5" y="13.5" width="7" height="7" rx="2"></rect>
+          </svg>
+        </button>
+        <button class="rail-btn" type="button" data-filter="software" title="软件包" aria-label="软件包" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3.5 20 8v8l-8 4.5L4 16V8z"></path>
+            <path d="m4 8 8 4.5L20 8"></path>
+            <path d="M12 12.5V20"></path>
+          </svg>
+        </button>
+        <button class="rail-btn" type="button" data-filter="doc" title="文档" aria-label="文档" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 3.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5z"></path>
+            <path d="M14 3.5v5h5"></path>
+            <path d="M8.5 13h7"></path>
+            <path d="M8.5 16.5h5"></path>
+          </svg>
+        </button>
+        <button class="rail-btn" type="button" data-filter="asset" title="素材" aria-label="素材" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3.5" y="4.5" width="17" height="15" rx="2.5"></rect>
+            <circle cx="9" cy="10" r="1.6"></circle>
+            <path d="m4.5 17 4.8-4.6a2 2 0 0 1 2.7 0l3.2 3.1a2 2 0 0 0 2.7 0l1.6-1.5"></path>
+          </svg>
+        </button>
+      </nav>
+      <button class="rail-top" type="button" id="toTop" title="回到顶部" aria-label="回到顶部">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 19V5"></path>
+          <path d="m6 11 6-6 6 6"></path>
+        </svg>
+      </button>
+    </aside>
+
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <img class="top-logo" src="assets/images/logo.png" alt="AUTO 标志" width="2459" height="1080" decoding="async">
+          <div class="brand-text">
+            <p class="brand-name">下载中心</p>
+            <p class="brand-sub">静态资源站 · GitHub Pages</p>
+          </div>
+        </div>
+
+        <nav class="top-nav" aria-label="分类导航">
+          <button class="nav-link is-active" type="button" data-filter="all" aria-pressed="true">全部资源</button>
+          <button class="nav-link" type="button" data-filter="software" aria-pressed="false">软件包</button>
+          <button class="nav-link" type="button" data-filter="doc" aria-pressed="false">文档</button>
+          <button class="nav-link" type="button" data-filter="asset" aria-pressed="false">素材</button>
+        </nav>
+
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="m16 16 4 4"></path>
+          </svg>
+          <input id="search" type="search" placeholder="搜索资源或文件名" aria-label="搜索资源或文件名" autocomplete="off">
+        </label>
+      </header>
+
+      <main class="app-main" id="appMain">
+        <div class="content">
+          <section class="hero">
+            <div class="hero-row">
+              <div>
+                <h1>下载中心</h1>
+                <p class="hero-sub">软件包、文档与素材，按平台分开下载最新版本。</p>
+              </div>
+              <div class="stats" id="stats"></div>
+            </div>
+          </section>
+
+          <section class="showcase" aria-labelledby="showcaseTitle">
+            <div class="showcase-head">
+              <div class="showcase-text">
+                <h2 class="showcase-title" id="showcaseTitle">刷课工作台</h2>
+                <p class="showcase-desc">独立刷课工作台，自带隔离浏览器，不用和你日常浏览器共用账号。可以一键安装刷课脚本、实时看页面运行状态，关掉就自动清缓存，省心稳定。</p>
+              </div>
+              <span class="version">v0.2.8</span>
+            </div>
+            <div class="gallery">
+              <a class="shot" href="assets/images/workbench-1.png" target="_blank" rel="noopener" title="查看大图">
+                <img src="assets/images/workbench-1.png" alt="刷课工作台主界面：独立浏览器入口、脚本与权限、右侧网页监控" width="1920" height="1080" decoding="async">
+              </a>
+              <a class="shot" href="assets/images/workbench-2.png" target="_blank" rel="noopener" title="查看大图">
+                <img src="assets/images/workbench-2.png" alt="刷课工作台界面截图 2" width="1920" height="1080" loading="lazy" decoding="async">
+              </a>
+              <a class="shot" href="assets/images/workbench-3.png" target="_blank" rel="noopener" title="查看大图">
+                <img src="assets/images/workbench-3.png" alt="刷课工作台界面截图 3" width="1920" height="1080" loading="lazy" decoding="async">
+              </a>
+              <a class="shot" href="assets/images/workbench-4.png" target="_blank" rel="noopener" title="查看大图">
+                <img src="assets/images/workbench-4.png" alt="刷课工作台界面截图 4" width="1920" height="1080" loading="lazy" decoding="async">
+              </a>
+            </div>
+          </section>
+
+          <div class="cards" id="grid"></div>
+          <p class="empty" id="empty" hidden></p>
+        </div>
+
+        <aside class="aside">
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>资源概览</h2>
+                <p>按分类统计</p>
+              </div>
+            </div>
+            <div class="table" id="overview"></div>
+            <button class="dark-pill" type="button" id="resetFilter">查看全部资源</button>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>平台支持</h2>
+                <p>各平台可下载文件数</p>
+              </div>
+              <span class="pill pill--green" id="platformPill"></span>
+            </div>
+            <div class="platforms" id="platforms"></div>
+          </section>
+        </aside>
+
+        <footer class="app-foot">
+          <p>静态站点 · 托管于 GitHub Pages · 下载数据维护在 assets/downloads.js</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片预览" hidden>
+    <button class="lightbox-close" type="button" id="lightboxClose" aria-label="退出图片预览">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="m6 6 12 12"></path>
+        <path d="m18 6-12 12"></path>
+      </svg>
+      <span>退出</span>
+    </button>
+    <img class="lightbox-img" id="lightboxImg" alt="" decoding="async">
+  </div>
+
+  <noscript>
+    <p class="noscript">需要启用 JavaScript 才能加载下载列表。</p>
+  </noscript>
+
+  <script src="assets/downloads.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
