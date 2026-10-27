@@ -99,6 +99,13 @@
   }
 
   /* ---------- 卡片 ---------- */
+  var MIRROR_PREFIX = 'https://ghfast.top/';
+
+  /* GitHub Releases 在国内直连较慢，自动给出加速镜像地址 */
+  function mirrorUrl(url) {
+    return /^https:\/\/github\.com\//i.test(url) ? MIRROR_PREFIX + url : '';
+  }
+
   function fileRowHtml(file) {
     var url = file.url || '#';
     var isExternal = /^(?:https?:)?\/\//i.test(url);
@@ -106,6 +113,11 @@
     linkAttrs += isExternal
       ? ' target="_blank" rel="noopener"'
       : ' download="' + escapeHtml(file.name || '') + '"';
+
+    var mirror = file.mirror || mirrorUrl(url);
+    var mirrorBtn = mirror
+      ? '<a class="btn btn--ghost" href="' + escapeHtml(mirror) + '" target="_blank" rel="noopener" title="通过第三方镜像加速下载">加速</a>'
+      : '';
 
     var platform = file.platform
       ? '<span class="platform">' + platformIcon(file.platform) + escapeHtml(file.platform) + '</span>'
@@ -119,6 +131,7 @@
             escapeHtml(file.name || url) +
           '</span>' +
         '</div>' +
+        mirrorBtn +
         '<a class="btn" ' + linkAttrs + '>' + DOWNLOAD_ICON + '下载</a>' +
       '</div>'
     );
