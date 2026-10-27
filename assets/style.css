@@ -657,6 +657,18 @@ h3 {
   transform: scale(1.025);
 }
 
+/* ---------- 视频教程 ---------- */
+.tutorial-video {
+  display: block;
+  width: 100%;
+  max-height: 460px;
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  border-radius: var(--radius-md);
+  background: #0b1220;
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.05);
+  object-fit: contain;
+}
+
 @media (min-width: 1340px) {
   .gallery {
     grid-template-columns: repeat(4, minmax(0, 1fr));
