@@ -657,6 +657,25 @@ h3 {
   transform: scale(1.025);
 }
 
+/* ---------- 主页图片栏 ---------- */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: #0b1220;
+  box-shadow: var(--shadow-card);
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* ---------- 视频教程 ---------- */
 .tutorial-video {
   display: block;
@@ -1103,6 +1122,10 @@ h3 {
 
   .showcase {
     padding: 16px;
+  }
+
+  .banner {
+    height: 240px;
   }
 
   .gallery {
