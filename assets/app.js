@@ -161,12 +161,14 @@
   function renderGrid() {
     var showcase = document.querySelector('.showcase');
     var tutorial = document.querySelector('.tutorial');
+    var banner = document.querySelector('.banner');
     var showShowcase = activeCategory === 'all' || activeCategory === 'asset';
     var showTutorial = activeCategory === 'all' || activeCategory === 'software' || activeCategory === 'tutorial';
 
     /* 图片素材只在大图展示区呈现，不在下载卡片中重复 */
     if (showcase) showcase.hidden = !showShowcase;
     if (tutorial) tutorial.hidden = !showTutorial;
+    if (banner) banner.hidden = activeCategory !== 'all';
 
     if (activeCategory === 'asset' || activeCategory === 'tutorial') {
       grid.hidden = true;
