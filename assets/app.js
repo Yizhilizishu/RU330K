@@ -162,13 +162,13 @@
     var showcase = document.querySelector('.showcase');
     var tutorial = document.querySelector('.tutorial');
     var showShowcase = activeCategory === 'all' || activeCategory === 'asset';
-    var showTutorial = activeCategory === 'all' || activeCategory === 'software';
+    var showTutorial = activeCategory === 'all' || activeCategory === 'software' || activeCategory === 'tutorial';
 
     /* 图片素材只在大图展示区呈现，不在下载卡片中重复 */
     if (showcase) showcase.hidden = !showShowcase;
     if (tutorial) tutorial.hidden = !showTutorial;
 
-    if (activeCategory === 'asset') {
+    if (activeCategory === 'asset' || activeCategory === 'tutorial') {
       grid.hidden = true;
       grid.innerHTML = '';
       empty.hidden = true;
