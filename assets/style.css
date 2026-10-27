@@ -665,7 +665,7 @@ h3 {
   height: 400px;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  background: #0b1220;
+  background: #000;
   box-shadow: var(--shadow-card);
 }
 
