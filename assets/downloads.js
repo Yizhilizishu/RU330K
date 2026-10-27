@@ -18,29 +18,29 @@
 window.DOWNLOADS = [
   {
     name: '刷课工作台 · 便携版',
-    version: '0.2.8',
+    version: '2.0.0',
     category: 'software',
     desc: '免安装版本，双击即可运行，不写入系统安装目录，适合临时使用或随身携带。',
     updated: '2026-10-27',
     files: [
       {
         platform: 'Windows',
-        name: '刷课工作台便携版.exe',
-        url: 'https://github.com/Yizhilizishu/RU330K/releases/download/v0.2.8/Workbench-Portable-0.2.8.exe'
+        name: '刷课工作台-2.0.0-便携版.exe',
+        url: 'https://github.com/Yizhilizishu/RU330K/releases/download/v2.0.0/Workbench-Portable-2.0.0.exe'
       }
     ]
   },
   {
     name: '刷课工作台 · 安装版',
-    version: '0.2.8',
+    version: '2.0.0',
     category: 'software',
     desc: '标准安装程序，引导安装到系统并创建开始菜单快捷方式，适合长期固定使用。',
     updated: '2026-10-27',
     files: [
       {
         platform: 'Windows',
-        name: '刷课工作台安装版.exe',
-        url: 'https://github.com/Yizhilizishu/RU330K/releases/download/v0.2.8/Workbench-Setup-0.2.8.exe'
+        name: '刷课工作台-2.0.0-安装版.exe',
+        url: 'https://github.com/Yizhilizishu/RU330K/releases/download/v2.0.0/Workbench-Setup-2.0.0.exe'
       }
     ]
   }
