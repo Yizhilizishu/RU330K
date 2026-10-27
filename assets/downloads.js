@@ -26,7 +26,7 @@ window.DOWNLOADS = [
       {
         platform: 'Windows',
         name: '刷课工作台便携版.exe',
-        url: 'files/刷课工作台便携版.exe'
+        url: 'https://github.com/Yizhilizishu/RU330K/releases/download/v0.2.8/Workbench-Portable-0.2.8.exe'
       }
     ]
   },
@@ -40,7 +40,7 @@ window.DOWNLOADS = [
       {
         platform: 'Windows',
         name: '刷课工作台安装版.exe',
-        url: 'files/刷课工作台安装版.exe'
+        url: 'https://github.com/Yizhilizishu/RU330K/releases/download/v0.2.8/Workbench-Setup-0.2.8.exe'
       }
     ]
   }
