@@ -711,6 +711,16 @@ h3 {
   }
 }
 
+/* 整行展示的大图，按原比例完整显示 */
+.shot--wide {
+  grid-column: 1 / -1;
+}
+
+.shot--wide img {
+  aspect-ratio: 1257 / 838;
+  object-fit: contain;
+}
+
 /* ---------- 右侧面板 ---------- */
 .aside {
   grid-area: aside;
@@ -1161,6 +1171,10 @@ h3 {
   .shot {
     flex: 0 0 78%;
     scroll-snap-align: start;
+  }
+
+  .shot--wide {
+    flex: 0 0 100%;
   }
 
   .file-row {
